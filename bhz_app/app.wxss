@@ -1,0 +1,32 @@
+/**app.wxss**/
+page {
+  font-family: PingFangSC-Regular, PingFang SC;
+} 
+.flex{
+  display:flex;
+  align-items:center;
+}
+.flex-sp{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.flex-sp-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+}
+.flex-top{
+  display:flex;
+  align-items:flex-start;
+}
+.flex-son{
+  flex:1;
+}
+.flex-wrap{
+  display:flex;
+  flex-wrap:wrap;
+}
+.ellipsis1{overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.ellipsis2, .ellipsis3{display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.ellipsis3{-webkit-line-clamp: 3;}

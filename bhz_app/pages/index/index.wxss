@@ -1,0 +1,124 @@
+/**index.wxss**/
+.nav_top_seat{
+  width:100%;
+  height: 176rpx;
+}
+.nav_top{
+  width:100%;
+  border-top:2rpx solid #DADADA;
+  border-bottom:2rpx solid #DADADA;
+  position: fixed;
+  left:0;
+  top: 0;
+  z-index:10;
+  padding:5rpx 0 9rpx 5%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  font-weight: 600;
+  background: #fff;
+}
+.nav_con{
+  position: relative;
+  height:160rpx;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+.nav_li{
+  width:20%;
+  color: #26292C;
+  line-height: 80rpx;
+  text-align: left;
+}
+.nav_li.selected{color:#006BD6;font-family: PingFangSC-Semibold, PingFang SC;}
+
+.more{
+  width:20%;
+  height: 80rpx;
+  color:#999999;
+  position: absolute;
+  right:0;
+  bottom: 0;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+  background: #fff;
+  justify-content: flex-end;
+}
+.icon_more{
+  width: 18rpx;
+  height: 12rpx;
+  margin-left: 8rpx;
+}
+/* calc运算符要有空格 */
+.side_nav{
+  width: 224rpx;
+  /* height: calc(100vh - 176rpx); */
+  height:100vh;
+  padding-top:176rpx;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: #F7F8FC;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index:9;
+}
+.side_nav_li{
+  width: 100%;
+  text-align: center;
+  line-height: 70rpx;
+  padding: 10rpx 0;
+  font-size: 24rpx;
+  color: #333333;
+}
+.side_selected{
+  color: #006BD6;
+  background-color: #fff;
+  position: relative;
+}
+.side_selected::before{
+  content: '';
+  width:8rpx;
+  height: 30rpx;
+  border-radius: 8rpx;
+  background-color: #006BD6;
+  position: absolute;
+  left: 0;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.con{
+  height: calc(100vh - 176rpx);
+  padding-left:224rpx;
+}
+.con-inner{padding-bottom: 20rpx;}
+.con_li{
+  width: 33.3%;
+  flex-direction: column;
+  margin-top: 22rpx;
+}
+.con_li_img{
+  width:151rpx;
+  height: 151rpx;
+  margin-bottom: 14rpx;
+}
+.con_li .title{
+  width: 100%;
+  padding:0 4rpx;
+  box-sizing: border-box;
+  height: 30rpx;
+  font-size: 22rpx;
+  font-weight: 400;
+  color: #333333;
+  line-height: 30rpx;
+  text-align: center;
+}
+
+.loading{
+  width: 100%;
+  font-size: 22rpx;
+  font-weight: 400;
+  color: #333333;
+  line-height: 30rpx;
+  text-align: center;
+}

@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="nav_top_seat">
+    <view class="nav_top">
+      <view class="nav_con flex-top flex-wrap" style="{{slideNav?'height:auto;':null}}">
+        <block wx:for="{{navList}}" wx:key='index'>
+          <view class="nav_li ellipsis1 {{index===selected?'selected':''}}" data-index="{{index}}" bindtap="changeNav">{{item.name}}</view>
+        </block>
+        <view class="nav_li"></view>
+        <view class="more flex" wx:if="{{navList.length>10}}" bindtap="openAll">{{slideNav?'收起':'更多'}} <image class="icon_more" src="{{slideNav?'../../images/icons/up.png':'../../images/icons/down.png'}}"></image></view>
+      </view>
+    </view>
+  </view>
+  <view class="container flex">
+    <view class="side_nav">
+      <view class="side_nav_li ellipsis1 {{index===sideSelected?'side_selected':''}}" wx:for="{{sideNavList}}" wx:key='index' data-index="{{index}}" bindtap="changeSideNav">{{item.name}}</view>
+    </view>
+    <view class="con flex-son">
+
+      <scroll-view style="height:100%;"  scroll-y="true"   bindscrolltolower="ScrollLower">
+        <view class="con-inner flex-top flex-wrap">
+
+          <navigator class="con_li flex" hover-class="none" wx:for="{{conList}}" wx:key='index' url="/pages/goodsList/goodsList?id={{item.id}}">
+            <image class="con_li_img" src="{{item.thumb}}" mode="aspectFit"></image>
+            <text class="title ellipsis1">{{item.name}}</text>
+          </navigator>
+
+          <view class="loading" hidden="{{!searchLoading}}">正在加载更多...</view>
+          <view class="loading complete" hidden="{{!searchLoadingComplete}}">已加载全部</view>
+        </view>
+        
+        
+      </scroll-view>
+
+      
+      
+    </view>
+  </view>
+</view>
